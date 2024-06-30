@@ -1,6 +1,5 @@
 import { AuthContainer } from "../pages/AuthContainer";
 import { LoginAuth } from "../components";
-
 export const routes = [
   {
     path: 'auth',
