@@ -1,45 +1,39 @@
-import { ChangeEvent, FC, useState } from "react";
-import { HidePasswordIcon, ShowPasswordIcon } from "../../constants/imageIndex";
+import { useOutletContext } from "react-router-dom";
+import { TextInputAuth } from "../inputs";
+import { useState } from "react";
+import { AuthButton } from "../buttons";
 
-export const LoginAuth: FC = () => {
+export const LoginAuth = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [showPasword, setShowPassword] = useState<boolean>(
-    password.length === 0,
-  );
+  const isLightMode = useOutletContext();
   return (
-    <form
-      className="border-[2px] 
-            border-white
-            mx-auto
-            container
-            items-center
-            flex 
-            flex-col
-            gap-2
-            w-[400px]
-            px-6
-            py-2
-            "
-    >
-      <input
-        type="email"
-        placeholder="Enter your email"
+    <div className="flex flex-col items-center justify-center gap-y-4">
+      <TextInputAuth
+        className={isLightMode ? "text-white" : "bg-gray-200 text-gay-900"}
+        placeHolder={"Enter your email"}
+        onChange={(e) => {
+          setEmail(e.target.value);
+        }}
         value={email}
-        onChange={(e: ChangeEvent<HTMLInputElement>) =>
-          setEmail(e.target.value)
-        }
+        title={"Email"}
       />
-
-      <input
-        type="text"
-        placeholder="Password here"
+      <TextInputAuth
+        className={isLightMode ? "text-white" : "bg-gray-200 text-gay-900"}
+        placeHolder={"Enter your password"}
+        onChange={(e) => {
+          setPassword(e.target.value);
+        }}
         value={password}
-        className="grow"
-        onChange={(e: ChangeEvent<HTMLInputElement>) =>
-          setPassword(e.target.value)
-        }
+        title={"Password"}
       />
-    </form>
+      <AuthButton
+        className={`
+          ${isLightMode ? " text-white bg-primary-dark" : "text-black bg-gray-200"}
+        `}
+        text={"Login"}
+        onClick={() => {}}
+      />
+    </div>
   );
 };

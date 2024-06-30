@@ -4,10 +4,10 @@ import { Outlet } from "react-router-dom";
 import { useTheme } from "../hooks";
 
 export const AuthContainer: FC = () => {
-  const theme = useTheme();
+  const themeContext = useTheme();
   return (
     <div
-      className={`flex h-screen ${theme.theme ? "bg-light-primary" : "bg-dark-primary"}`}
+      className={`flex h-screen ${themeContext.theme ? "bg-light-primary" : "bg-dark-primary"}`}
     >
       <div className="flex-1">
         <img src={AuthImage} className="h-full " alt="Auth Image" />
@@ -21,7 +21,7 @@ export const AuthContainer: FC = () => {
       justify-center
       "
       >
-        <Outlet />
+        <Outlet context={themeContext.theme} />
       </div>
     </div>
   );
