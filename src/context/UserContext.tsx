@@ -1,6 +1,6 @@
 import { createContext, FC, useState } from "react";
-import { TContextProps } from "../@types";
-export const UserContext = createContext<TContextProps | null>(null);
+import { TContextProps, TUserContextType } from "../@types";
+export const UserContext = createContext<TUserContextType | null>(null);
 
 type TUserStateType = {
   isAuthenticated: boolean;

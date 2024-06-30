@@ -1,6 +1,5 @@
 import { createContext, FC, useState } from "react";
 import { TThemeContextType, TContextProps } from "../@types";
-
 export const ThemeContext = createContext<TThemeContextType | null>(null);
 //false means night mode
 const ThemeContextProvider: FC<TContextProps> = ({ children }) => {
@@ -16,5 +15,4 @@ const ThemeContextProvider: FC<TContextProps> = ({ children }) => {
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   );
 };
-
 export default ThemeContextProvider;
