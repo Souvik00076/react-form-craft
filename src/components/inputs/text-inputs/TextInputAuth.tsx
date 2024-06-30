@@ -6,7 +6,7 @@ type TTextInputAuthType = {
   value: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   placeHolder: string;
-  title: string;
+  title?: string;
 };
 export const TextInputAuth: FC<TTextInputAuthType> = ({
   className,
