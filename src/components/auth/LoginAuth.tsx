@@ -7,7 +7,7 @@ export const LoginAuth = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const isLightMode = useOutletContext();
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   return (
     <div className="flex flex-col items-center justify-center gap-y-4">
       <TextInputAuth
@@ -33,14 +33,9 @@ export const LoginAuth = () => {
           ${isLightMode ? " text-white bg-primary-dark" : "text-black bg-gray-200"}
         `}
         text={"Login"}
-        onClick={() => {}}
+        onClick={() => { }}
       />
-      <span
-        onClick={() => navigate("/auth/register")}
-        className="text-bold text-lg cursor-pointer"
-      >
-        Don't have an account ? Sign Up
-      </span>
-    </div>
+      <span onClick={() => navigate('/auth/register')} className="text-bold text-lg cursor-pointer">Don't have an account ? Sign Up</span>
+    </div >
   );
 };
