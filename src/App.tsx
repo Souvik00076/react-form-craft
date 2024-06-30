@@ -1,8 +1,16 @@
-import { FC } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { routes } from "./routes";
+import UserContextProvider from "./context/UserContext";
+import ThemeContextProvider from "./context/ThemeContext";
 
-const App: FC = () => {
+const App = () => {
+  const router = createBrowserRouter(routes);
 
-  return <></>
+  return <UserContextProvider>
+    <ThemeContextProvider>
+      <RouterProvider router={router} />
+    </ThemeContextProvider>
+  </UserContextProvider>
 }
 
 export default App
