@@ -1,3 +1,3 @@
 import { useTheme } from "./useTheme";
-
-export { useTheme };
+import { useUser } from "./useUser";
+export { useTheme, useUser };

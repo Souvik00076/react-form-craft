@@ -1,5 +1,6 @@
 import { AuthContainer } from "../pages/AuthContainer";
 import { LoginAuth, SignupAuth } from "../components";
+import { MainContainer } from "../pages/MainContainer";
 export const routes = [
   {
     path: "auth",
@@ -14,5 +15,9 @@ export const routes = [
         element: <SignupAuth />,
       },
     ],
+  },
+  {
+    path: "/",
+    element: <MainContainer />,
   },
 ];
