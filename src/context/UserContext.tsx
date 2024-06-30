@@ -1,54 +1,49 @@
 import { createContext, FC, useState } from "react";
 import { TContextProps } from "../@types";
-export const UserContext = createContext<TContextProps | null>(null)
+export const UserContext = createContext<TContextProps | null>(null);
 
 type TUserStateType = {
   isAuthenticated: boolean;
   userName: string;
   email: string;
   loading: boolean;
-}
-const UserContextProvider: FC<TContextProps> = ({
-  children
-}) => {
+};
+const UserContextProvider: FC<TContextProps> = ({ children }) => {
   const [user, setUser] = useState<TUserStateType>({
     isAuthenticated: false,
-    userName: '',
-    email: '',
-    loading: false
-  })
+    userName: "",
+    email: "",
+    loading: false,
+  });
 
   const setUserName = (userName: string) => {
-    setUser({ ...user, userName })
-  }
+    setUser({ ...user, userName });
+  };
 
   const setUserEmail = (email: string) => {
     setUser({ ...user, email });
-  }
+  };
   const setIsAuthenticated = (isAuthenticated: boolean) => {
     setUser({
       ...user,
-      isAuthenticated
-    })
-  }
+      isAuthenticated,
+    });
+  };
   const setUserLoading = (loading: boolean) => {
     setUser({
       ...user,
-      loading
-    })
-  }
+      loading,
+    });
+  };
 
   const value = {
     user,
     setUserName,
     setUserEmail,
     setIsAuthenticated,
-    setUserLoading,// corrected from setLoading to setUserLoading based on your context
-    children
+    setUserLoading, // corrected from setLoading to setUserLoading based on your context
+    children,
   };
-  return <UserContext.Provider value={value}>
-    {children}
-  </UserContext.Provider>
-
-}
-export default UserContextProvider
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+};
+export default UserContextProvider;

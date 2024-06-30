@@ -2,12 +2,13 @@ import { AuthContainer } from "../pages/AuthContainer";
 import { LoginAuth } from "../components";
 export const routes = [
   {
-    path: 'auth',
+    path: "auth",
     element: <AuthContainer />,
     children: [
       {
-        path: 'login',
-        element: <LoginAuth />
-      }
-    ]
-  }]
+        path: "login",
+        element: <LoginAuth />,
+      },
+    ],
+  },
+];

@@ -6,11 +6,13 @@ import ThemeContextProvider from "./context/ThemeContext";
 const App = () => {
   const router = createBrowserRouter(routes);
 
-  return <UserContextProvider>
-    <ThemeContextProvider>
-      <RouterProvider router={router} />
-    </ThemeContextProvider>
-  </UserContextProvider>
-}
+  return (
+    <UserContextProvider>
+      <ThemeContextProvider>
+        <RouterProvider router={router} />
+      </ThemeContextProvider>
+    </UserContextProvider>
+  );
+};
 
-export default App
+export default App;
