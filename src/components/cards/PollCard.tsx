@@ -26,7 +26,7 @@ export const PollCard: FC<TPollCardType> = ({
         `
       w-[300px]
       h-[200px]
-      rounded-md
+      rounded-3xl
       ${themeContext.theme ? "text-black" : "text-gray-300"}
       p-4
       flex
