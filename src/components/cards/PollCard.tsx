@@ -3,7 +3,7 @@ import { mergeClass } from "../../utils";
 import { useTheme } from "../../hooks";
 
 type TPollCardType = {
-  className: string;
+  nameClass: string;
   title: string;
   subTitle: string;
   value: number;
@@ -12,7 +12,7 @@ type TPollCardType = {
 };
 
 export const PollCard: FC<TPollCardType> = ({
-  className,
+  nameClass,
   title,
   subTitle,
   value,
@@ -33,7 +33,7 @@ export const PollCard: FC<TPollCardType> = ({
       items-center
       justify-between
 `,
-        className,
+        nameClass,
       )}
     >
       <div className="flex flex-col gap-y-2">
