@@ -1,2 +1,3 @@
 import { FormInfo } from "./FormInfo";
-export { FormInfo };
+import { FormViewer } from "./FormViewer";
+export { FormInfo, FormViewer };

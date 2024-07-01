@@ -8,6 +8,8 @@ import VisitIcon from "../../public/images/image_visit_icon.png";
 import SubmissionIcon from "../../public/images/image_submission_icon.png";
 import BounceRateIcon from "../../public/images/image_bounce_rate.png";
 import SubmissionRateIcon from "../../public/images/image_submission_rate.png";
+import UploadImageWhiteIcon from "../../public/images/image_upload_white.png";
+import UploadImageBlackIcon from "../../public/images/image_upload_black.png";
 export {
   VisitIcon,
   SubmissionIcon,
@@ -19,4 +21,6 @@ export {
   GoogleIcon,
   DarkModeIcon,
   LightModeIcon,
+  UploadImageWhiteIcon,
+  UploadImageBlackIcon,
 };

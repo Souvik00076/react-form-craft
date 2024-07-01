@@ -8,7 +8,7 @@ import {
 } from "../../constants/imageIndex";
 export const FormInfo: FC = () => {
   return (
-    <div className="flex px-12 py-8  items-center justify-evenly">
+    <div className="flex items-center  justify-between">
       <PollCard
         nameClass={"shadow-pollcard-shadow-blue"}
         title={"Total visits"}
