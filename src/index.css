@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dotted-border-white {
+  border: 2px dotted white;
+}
+
+.dotted-border-black {
+  border: 2px dotted black;
+}

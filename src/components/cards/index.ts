@@ -1,3 +1,3 @@
 import { PollCard } from "./PollCard";
-
-export { PollCard };
+import { CreateForm } from "./CreateForm";
+export { PollCard, CreateForm };
